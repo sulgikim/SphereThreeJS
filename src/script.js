@@ -145,8 +145,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  * Animate
  */
 
-//interactivity 
 
+//interaction as mouse moving 
 document.addEventListener('mousemove', onDocumentMouseMove)
 
 let mouseX = 0;
@@ -163,6 +163,15 @@ function onDocumentMouseMove(event) {
     mouseY = (event.clientY - windowY)
 }
 
+//interaction as scrolling down
+window.addEventListener('scroll', updateSphere)
+
+function updateSphere(event) {
+    sphere.position.y = window.scrollY * 0.01
+}
+
+
+
 //rotation & add interaction 
 const clock = new THREE.Clock()
 
@@ -177,10 +186,12 @@ const tick = () =>
     // Update objects
     sphere.rotation.y = .5 * elapsedTime
 
-    //Update interaction 
+    //Update interaction -- rotate as mouse moving
     sphere.rotation.y += .5 * (targetX - sphere.rotation.x)
     sphere.rotation.x += .05 * (targetY - sphere.rotation.x)
-    sphere.rotation.z += -.05 * (targetY - sphere.rotation.x)
+    
+    //Update interaction -- get closer as mouse moving
+    sphere.position.z += -.05 * (targetY - sphere.rotation.x)
 
 
     // Update Orbital Controls
