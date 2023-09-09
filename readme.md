@@ -1,5 +1,8 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# Three.js 3D Sphere with interaction 
+Explore a mesmerizing 3D sphere created with HTML, CSS, and JavaScript, powered by Three.js and WebGL. Interact with it through scrolling and mouse movement, immersing yourself in a dynamic and visually stunning web experience.
+
+## Tutorial by
+Design Course: https://youtu.be/pUgWfqWZWmM?si=rDfxCecirAIMlDx_
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
@@ -11,7 +14,3 @@ npm install
 
 # Run the local server at localhost:8080
 npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
