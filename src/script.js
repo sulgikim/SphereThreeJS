@@ -53,12 +53,11 @@ pointLight2.intensity = 7.3
 scene.add(pointLight2)
 
 //Debug panel for point light so cooooool 
-
-const light2 = gui.addFolder('Light 2')
-light2.add(pointLight2.position, 'x').min(-3).max(3).step(0.1)
-light2.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
-light2.add(pointLight2.position, 'z').min(-3).max(3).step(0.1)
-light2.add(pointLight2, 'intensity').min(-10).max(10).step(0.01)
+// const light2 = gui.addFolder('Light 2')
+// light2.add(pointLight2.position, 'x').min(-3).max(3).step(0.1)
+// light2.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
+// light2.add(pointLight2.position, 'z').min(-3).max(3).step(0.1)
+// light2.add(pointLight2, 'intensity').min(-10).max(10).step(0.01)
 
 //red object to show where the light is coming from 
 // const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1)
@@ -71,21 +70,21 @@ pointLight3.position.set(0.5, -0.84, 0.2)
 pointLight3.intensity = 7.3
 scene.add(pointLight3)
 
-const light3 = gui.addFolder('Light 3')
-light3.add(pointLight3.position, 'x').min(-3).max(3).step(0.1)
-light3.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
-light3.add(pointLight3.position, 'z').min(-3).max(3).step(0.1)
-light3.add(pointLight3, 'intensity').min(-10).max(10).step(0.01)
+// const light3 = gui.addFolder('Light 3')
+// light3.add(pointLight3.position, 'x').min(-3).max(3).step(0.1)
+// light3.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
+// light3.add(pointLight3.position, 'z').min(-3).max(3).step(0.1)
+// light3.add(pointLight3, 'intensity').min(-10).max(10).step(0.01)
 
-//color panel 
-const light3Color = {
-    color: 0x69ff,
-} 
+// //color panel 
+// const light3Color = {
+//     color: 0x69ff,
+// } 
 
-light3.addColor(light3Color, 'color')
-    .onChange(() => {
-        pointLight3.color.set(light3Color.color)
-    })
+// light3.addColor(light3Color, 'color')
+//     .onChange(() => {
+//         pointLight3.color.set(light3Color.color)
+//     })
 
 // const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1)
 // scene.add(pointLightHelper2)
